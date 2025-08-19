@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Где используется «Мк100-ML»?</h1>
+        <p class="lead">Реальные сценарии применения нашего измерительного комплекса в различных отраслях.</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <!-- Use Case 1 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="https://placehold.co/400x250/EFEFEF/333333?text=График+Сила/Перемещение" class="card-img-top" alt="Испытательный стенд">
+                <div class="card-body">
+                    <h5 class="card-title">Испытательный стенд</h5>
+                    <p class="card-text"><strong>Задача:</strong> Контроль усилия и деформации при испытании пружин на сжатие.</p>
+                    <p class="card-text"><strong>Решение:</strong> К контроллеру подключены датчик силы и датчик перемещения. MicroLab NG строит график "Сила/Перемещение" в реальном времени.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Use Case 2 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="https://placehold.co/400x250/EFEFEF/333333?text=8+температурных+кривых" class="card-img-top" alt="Термический анализ">
+                <div class="card-body">
+                    <h5 class="card-title">Термический анализ</h5>
+                    <p class="card-text"><strong>Задача:</strong> Мониторинг распределения температуры по поверхности объекта при нагреве и охлаждении.</p>
+                    <p class="card-text"><strong>Решение:</strong> 8 термопар подключены к Мк100. На одном графике отображаются все 8 кривых, а виртуальный канал показывает их среднее значение.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Use Case 3 -->
+        <div class="col">
+            <div class="card h-100 shadow-sm">
+                <img src="https://placehold.co/400x250/EFEFEF/333333?text=Учебная+лаборатория" class="card-img-top" alt="Учебная лаборатория">
+                <div class="card-body">
+                    <h5 class="card-title">Учебная лаборатория</h5>
+                    <p class="card-text"><strong>Задача:</strong> Демонстрация студентам принципов работы датчиков и законов физики.</p>
+                    <p class="card-text"><strong>Решение:</strong> Студенты самостоятельно подключают датчики, калибруют их и проводят эксперименты, сразу видя результат на экране.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

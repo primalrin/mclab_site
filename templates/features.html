@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Возможности комплекса</h1>
+        <p class="lead">Детальное описание функционала контроллера «Мк100» и программного обеспечения «MicroLab NG».</p>
+    </div>
+
+    <!-- MicroLab NG Section -->
+    <div class="card shadow-sm mb-5">
+        <div class="card-header bg-primary text-white">
+            <h2 class="h3 mb-0">Программное обеспечение «MicroLab NG»</h2>
+        </div>
+        <div class="card-body p-lg-5">
+            <h3 class="card-title text-center mb-4">Центр управления вашим экспериментом</h3>
+
+            <!-- Feature Item -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-7">
+                    <h4>Многоканальный мониторинг в реальном времени</h4>
+                    <p>Одновременно отслеживайте десятки параметров. Каждый канал имеет настраиваемый цвет и имя для легкой идентификации на графике и в легенде.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://placehold.co/500x300/EFEFEF/333333?text=Скриншот+графиков" class="img-fluid rounded" alt="Многоканальный мониторинг">
+                </div>
+            </div>
+
+            <!-- Feature Item -->
+            <div class="row align-items-center flex-md-row-reverse mb-5">
+                <div class="col-md-7">
+                    <h4>Мощная система калибровки датчиков</h4>
+                    <p>Забудьте о ручных расчетах! Наш интерактивный калькулятор автоматически вычислит коэффициенты для линейной и полиномиальной калибровки. Просто введите эталонные значения.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://placehold.co/500x300/EFEFEF/333333?text=Окно+калибровки" class="img-fluid rounded" alt="Система калибровки">
+                </div>
+            </div>
+
+            <!-- More features... -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-7">
+                    <h4>Виртуальные каналы</h4>
+                    <p>Создавайте вычисляемые каналы без программирования. Например, канал «Среднее» автоматически рассчитает среднюю температуру по нескольким термопарам.</p>
+                </div>
+                <div class="col-md-5">
+                     <img src="https://placehold.co/500x300/EFEFEF/333333?text=Менеджер+каналов" class="img-fluid rounded" alt="Виртуальные каналы">
+                </div>
+            </div>
+
+            <div class="row align-items-center flex-md-row-reverse">
+                <div class="col-md-7">
+                    <h4>Интерактивный анализ и экспорт</h4>
+                    <p>Анализируйте данные прямо на графике с помощью курсора-"сечения". Масштабируйте интересующие участки. Экспортируйте результаты в .csv для дальнейшей обработки в Excel, MATLAB или Python.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://placehold.co/500x300/EFEFEF/333333?text=График+с+курсором" class="img-fluid rounded" alt="Анализ и экспорт">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mk100 Controller Section -->
+    <div class="card shadow-sm">
+        <div class="card-header bg-dark text-white">
+            <h2 class="h3 mb-0">Программируемый логический контроллер «Мк100»</h2>
+        </div>
+        <div class="card-body p-lg-5">
+            <h3 class="card-title text-center mb-4">Надежная основа для ваших измерений</h3>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="bi bi-shield-check text-primary me-2"></i><strong>Промышленная надежность:</strong> Компактный и прочный корпус для лабораторных и цеховых условий.</li>
+                        <li class="mb-3"><i class="bi bi-plug text-primary me-2"></i><strong>Прямое подключение датчиков:</strong> Встроенные схемы для термопар (ТХА, ТХК и др.) без внешних усилителей.</li>
+                        <li class="mb-3"><i class="bi bi-speedometer2 text-primary me-2"></i><strong>Высокая скорость опроса:</strong> Получайте данные с минимальной задержкой для быстропротекающих процессов.</li>
+                        <li class="mb-3"><i class="bi bi-usb-plug text-primary me-2"></i><strong>Стандартный интерфейс:</strong> Простое подключение к ПК через стандартный COM-порт (USB-COM).</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://placehold.co/500x400/EFEFEF/333333?text=Фото+контроллера+Мк100" class="img-fluid rounded" alt="Контроллер Мк100">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

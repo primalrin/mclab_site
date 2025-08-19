@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Центр загрузок</h1>
+        <p class="lead">Все необходимое для начала работы с комплексом «Мк100-ML».</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Software -->
+            <h2 class="border-bottom pb-2 mb-3">Программное обеспечение</h2>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h4 class="mb-0">MicroLab</h4>
+                    <small class="text-muted">Версия: 1.0.2.4</small>
+                </div>
+                <a href="{{ url_for('static', filename='downloads/MicroLab.exe') }}" class="btn btn-primary"><i class="bi bi-download me-2"></i>Скачать .exe</a>
+            </div>
+            
+            <!-- Documentation -->
+            <h2 class="border-bottom pb-2 mb-3 mt-5">Документация</h2>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div><h5 class="mb-0">ПЛК MK100 Инструкция MicroLab</h5></div>
+                <a href="{{ url_for('static', filename='downloads/ПЛК MK100 Инструкция MicroLab ver. 1.0.2.4 отредактирована.pdf') }}" class="btn btn-outline-secondary" target="_blank"><i class="bi bi-file-earmark-pdf me-2"></i>Открыть PDF</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content %}
+<!-- Hero Section -->
+<div class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <!-- ЗАМЕНИТЕ НА РЕАЛЬНОЕ ИЗОБРАЖЕНИЕ ПРОДУКТА -->
+            <img src="https://placehold.co/700x500/EFEFEF/333333?text=Мк100-ML\nна+ноутбуке" class="d-block mx-lg-auto img-fluid rounded shadow" alt="Измерительный комплекс Мк100-ML" loading="lazy">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Точные измерения. Простая визуализация.</h1>
+            <p class="lead">Измерительный комплекс «Мк100-ML» — надежный ПЛК и интуитивное программное обеспечение для сбора, анализа и сохранения данных в реальном времени.</p>
+            <hr class="my-4">
+            <h2 class="h4 mb-3">От сырых данных до готового отчета за минуты.</h2>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg px-4 me-md-2">Получить консультацию</a>
+                <a href="{{ url_for('features') }}" class="btn btn-outline-secondary btn-lg px-4">Узнать больше</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Key Advantages Section -->
+<div class="container px-4 py-5" id="featured-3">
+    <h2 class="pb-2 border-bottom text-center">Ключевые преимущества</h2>
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+        <div class="feature col text-center">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-3 rounded-circle">
+                <i class="bi bi-rocket-takeoff"></i>
+            </div>
+            <h3 class="fs-4">Быстрый старт</h3>
+            <p>Подключите датчики, запустите ПО и начните измерения за 5 минут.</p>
+        </div>
+        <div class="feature col text-center">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-3 rounded-circle">
+                <i class="bi bi-rulers"></i>
+            </div>
+            <h3 class="fs-4">Универсальность</h3>
+            <p>Поддержка термопар, линейных и нелинейных датчиков.</p>
+        </div>
+        <div class="feature col text-center">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-3 rounded-circle">
+                <i class="bi bi-calculator"></i>
+            </div>
+            <h3 class="fs-4">Мощная калибровка</h3>
+            <p>Превращайте сигналы в реальные физические величины с помощью встроенного калькулятора.</p>
+        </div>
+        <div class="feature col text-center">
+            <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3 p-3 rounded-circle">
+                <i class="bi bi-toggles"></i>
+            </div>
+            <h3 class="fs-4">Все под контролем</h3>
+            <p>Управляйте каналами, создавайте виртуальные датчики и сохраняйте конфигурации.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Demo Section -->
+<div class="bg-light">
+    <div class="container px-4 py-5">
+        <h2 class="text-center mb-4">Демонстрация работы</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="shadow-lg rounded overflow-hidden">
+                    <!-- ЗАМЕНИТЕ НА РЕАЛЬНОЕ ВИДЕО ИЛИ GIF -->
+                    <img src="https://placehold.co/1200x600/333333/FFFFFF?text=Анимированный+GIF+демонстрации+ПО" class="img-fluid" alt="Демонстрация работы MicroLab NG">
+                </div>
+                <p class="text-center mt-3 text-muted">Короткое видео (30-45 сек) показывает весь процесс: от подключения до сохранения данных в CSV.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

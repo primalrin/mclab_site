@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Технические характеристики</h1>
+        <p class="lead">Подробная информация для инженеров и технических специалистов.</p>
+    </div>
+
+    <div class="row justify-content-center g-5">
+        <!-- Controller Specs -->
+        <div class="col-lg-8">
+            <h2 class="mb-3">Контроллер «Мк100»</h2>
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Параметр</th>
+                        <th scope="col">Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Количество аналоговых каналов</td>
+                        <td>8 (уточнить реальное значение)</td>
+                    </tr>
+                    <tr>
+                        <td>Типы поддерживаемых датчиков</td>
+                        <td>Термопары (К, L), линейные (напряжение/ток), нелинейные, инкрементальные энкодеры</td>
+                    </tr>
+                    <tr>
+                        <td>Разрешение АЦП</td>
+                        <td>16-бит (уточнить)</td>
+                    </tr>
+                    <tr>
+                        <td>Максимальная частота опроса</td>
+                        <td>1000 Гц (уточнить)</td>
+                    </tr>
+                    <tr>
+                        <td>Интерфейс связи с ПК</td>
+                        <td>USB (через эмуляцию COM-порта)</td>
+                    </tr>
+                    <tr>
+                        <td>Питание</td>
+                        <td>24V DC</td>
+                    </tr>
+                    <tr>
+                        <td>Габариты и вес</td>
+                        <td>120x80x50 мм, 300 г (уточнить)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Software Specs -->
+        <div class="col-lg-8">
+            <h2 class="mb-3">ПО «MicroLab NG»</h2>
+            <table class="table table-striped table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Параметр</th>
+                        <th scope="col">Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Поддерживаемые ОС</td>
+                        <td>Windows 7, 8, 10, 11</td>
+                    </tr>
+                    <tr>
+                        <td>Режимы работы</td>
+                        <td>Непрерывный (прокрутка), Фиксированная длительность</td>
+                    </tr>
+                    <tr>
+                        <td>Форматы экспорта</td>
+                        <td>Данные (.csv), Конфигурация (.task)</td>
+                    </tr>
+                    <tr>
+                        <td>Максимальное кол-во каналов</td>
+                        <td>Ограничено производительностью ПК</td>
+                    </tr>
+                    <tr>
+                        <td>Типы калибровки</td>
+                        <td>Прямая, Линейная (Y=AX+B), Полином 3-й ст.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
