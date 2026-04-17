@@ -1,85 +1,161 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h1 class="display-4">Возможности комплекса</h1>
-        <p class="lead">Детальное описание функционала контроллера «Мк100» и программного обеспечения «MicroLab NG».</p>
-    </div>
-
-    <!-- MicroLab NG Section -->
-    <div class="card shadow-sm mb-5">
-        <div class="card-header bg-primary text-white">
-            <h2 class="h3 mb-0">Программное обеспечение «MicroLab NG»</h2>
-        </div>
-        <div class="card-body p-lg-5">
-            <h3 class="card-title text-center mb-4">Центр управления вашим экспериментом</h3>
-
-            <!-- Feature Item -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-7">
-                    <h4>Многоканальный мониторинг в реальном времени</h4>
-                    <p>Одновременно отслеживайте десятки параметров. Каждый канал имеет настраиваемый цвет и имя для легкой идентификации на графике и в легенде.</p>
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-shell">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                    <p class="section-kicker">Функции комплекса</p>
+                    <h1>ПО и контроллер работают как единая измерительная система.</h1>
+                    <p>Вместо разрозненных утилит вы получаете связанный контур: съём сигнала, настройка каналов, калибровка, анализ и экспорт данных внутри одного продукта.</p>
+                    <div class="page-hero-meta">
+                        <span class="page-hero-chip">Онлайн-мониторинг</span>
+                        <span class="page-hero-chip">Калибровка каналов</span>
+                        <span class="page-hero-chip">Виртуальные вычисления</span>
+                    </div>
                 </div>
-                <div class="col-md-5">
-                    <img src="https://placehold.co/500x300/EFEFEF/333333?text=Скриншот+графиков" class="img-fluid rounded" alt="Многоканальный мониторинг">
-                </div>
-            </div>
-
-            <!-- Feature Item -->
-            <div class="row align-items-center flex-md-row-reverse mb-5">
-                <div class="col-md-7">
-                    <h4>Мощная система калибровки датчиков</h4>
-                    <p>Забудьте о ручных расчетах! Наш интерактивный калькулятор автоматически вычислит коэффициенты для линейной и полиномиальной калибровки. Просто введите эталонные значения.</p>
-                </div>
-                <div class="col-md-5">
-                    <img src="https://placehold.co/500x300/EFEFEF/333333?text=Окно+калибровки" class="img-fluid rounded" alt="Система калибровки">
-                </div>
-            </div>
-
-            <!-- More features... -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-7">
-                    <h4>Виртуальные каналы</h4>
-                    <p>Создавайте вычисляемые каналы без программирования. Например, канал «Среднее» автоматически рассчитает среднюю температуру по нескольким термопарам.</p>
-                </div>
-                <div class="col-md-5">
-                     <img src="https://placehold.co/500x300/EFEFEF/333333?text=Менеджер+каналов" class="img-fluid rounded" alt="Виртуальные каналы">
-                </div>
-            </div>
-
-            <div class="row align-items-center flex-md-row-reverse">
-                <div class="col-md-7">
-                    <h4>Интерактивный анализ и экспорт</h4>
-                    <p>Анализируйте данные прямо на графике с помощью курсора-"сечения". Масштабируйте интересующие участки. Экспортируйте результаты в .csv для дальнейшей обработки в Excel, MATLAB или Python.</p>
-                </div>
-                <div class="col-md-5">
-                    <img src="https://placehold.co/500x300/EFEFEF/333333?text=График+с+курсором" class="img-fluid rounded" alt="Анализ и экспорт">
+                <div class="col-lg-4">
+                    <div class="hero-mini-board">
+                        <div class="hero-mini-card">
+                            <span>MicroLab NG</span>
+                            <strong>Графики</strong>
+                            <p>Наблюдение, курсоры, экспорт и сохранение конфигураций.</p>
+                        </div>
+                        <div class="hero-mini-card">
+                            <span>Мк100</span>
+                            <strong>Контроллер</strong>
+                            <p>Аппаратная основа для подключений, опроса и передачи данных на ПК.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
 
-    <!-- Mk100 Controller Section -->
-    <div class="card shadow-sm">
-        <div class="card-header bg-dark text-white">
-            <h2 class="h3 mb-0">Программируемый логический контроллер «Мк100»</h2>
-        </div>
-        <div class="card-body p-lg-5">
-            <h3 class="card-title text-center mb-4">Надежная основа для ваших измерений</h3>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <ul class="list-unstyled">
-                        <li class="mb-3"><i class="bi bi-shield-check text-primary me-2"></i><strong>Промышленная надежность:</strong> Компактный и прочный корпус для лабораторных и цеховых условий.</li>
-                        <li class="mb-3"><i class="bi bi-plug text-primary me-2"></i><strong>Прямое подключение датчиков:</strong> Встроенные схемы для термопар (ТХА, ТХК и др.) без внешних усилителей.</li>
-                        <li class="mb-3"><i class="bi bi-speedometer2 text-primary me-2"></i><strong>Высокая скорость опроса:</strong> Получайте данные с минимальной задержкой для быстропротекающих процессов.</li>
-                        <li class="mb-3"><i class="bi bi-usb-plug text-primary me-2"></i><strong>Стандартный интерфейс:</strong> Простое подключение к ПК через стандартный COM-порт (USB-COM).</li>
-                    </ul>
+<section class="section-shell pt-0">
+    <div class="container">
+        <div class="surface-card feature-panel">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-5">
+                    <div class="preview-card">
+                        <p class="section-kicker">MicroLab NG</p>
+                        <h2>Центр управления экспериментом.</h2>
+                        <p>Интерфейс строится вокруг работы оператора: каналы, графики, значения и настройки всегда в одном контексте.</p>
+                        <div class="preview-graph" aria-hidden="true">
+                            <div class="preview-bars">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="channel-list mt-4">
+                            <div class="channel-row">
+                                <span><i class="channel-status"></i> Канал 1</span>
+                                <strong>Температура</strong>
+                            </div>
+                            <div class="channel-row">
+                                <span><i class="channel-status"></i> Канал 2</span>
+                                <strong>Усилие</strong>
+                            </div>
+                            <div class="channel-row">
+                                <span><i class="channel-status"></i> Канал 3</span>
+                                <strong>Перемещение</strong>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="https://placehold.co/500x400/EFEFEF/333333?text=Фото+контроллера+Мк100" class="img-fluid rounded" alt="Контроллер Мк100">
+                <div class="col-lg-7">
+                    <p class="section-kicker">Программное обеспечение</p>
+                    <h2>MicroLab NG закрывает весь цикл работы с измерениями.</h2>
+                    <p class="section-lead">Оператор видит не только поток данных, но и средства для их осмысленной обработки прямо по ходу эксперимента.</p>
+                    <div class="feature-tile-grid">
+                        <div class="feature-tile">
+                            <span class="icon-pill"><i class="bi bi-graph-up-arrow"></i></span>
+                            <h3>Многоканальный мониторинг</h3>
+                            <p>Одновременно отслеживайте несколько параметров, назначайте имена, цвета и быстро ориентируйтесь в легенде графика.</p>
+                        </div>
+                        <div class="feature-tile">
+                            <span class="icon-pill"><i class="bi bi-bezier2"></i></span>
+                            <h3>Калибровка датчиков</h3>
+                            <p>Прямая, линейная и полиномиальная калибровка помогает перевести сигнал в реальные физические величины без внешних расчётов.</p>
+                        </div>
+                        <div class="feature-tile">
+                            <span class="icon-pill"><i class="bi bi-diagram-3"></i></span>
+                            <h3>Виртуальные каналы</h3>
+                            <p>Создавайте вычисляемые каналы для средних значений, сумм, производных и других рабочих величин без программирования.</p>
+                        </div>
+                        <div class="feature-tile">
+                            <span class="icon-pill"><i class="bi bi-cursor-text"></i></span>
+                            <h3>Анализ и экспорт</h3>
+                            <p>Выбирайте интересующие участки, изучайте значения по курсору и выгружайте результаты в CSV для дальнейшей обработки.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="section-shell pt-0">
+    <div class="container">
+        <div class="surface-card feature-panel">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <p class="section-kicker">Контроллер Мк100</p>
+                    <h2>Надёжная аппаратная часть для повседневной инженерной работы.</h2>
+                    <p class="section-lead">Контроллер проектируется как понятная и устойчивая основа измерительного стенда: прямое подключение датчиков, стандартный интерфейс связи и промышленная логика эксплуатации.</p>
+                    <div class="benefit-list">
+                        <div class="benefit-row">
+                            <i class="bi bi-shield-check"></i>
+                            <div>
+                                <h3>Надёжный корпус и промышленный подход</h3>
+                                <p>Подходит для лабораторных, учебных и производственных условий, где важны повторяемость и стабильность измерений.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-row">
+                            <i class="bi bi-plug"></i>
+                            <div>
+                                <h3>Прямое подключение датчиков</h3>
+                                <p>Работа с термопарами и другими типами сигналов без лишнего навесного оборудования и промежуточных усилителей.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-row">
+                            <i class="bi bi-speedometer2"></i>
+                            <div>
+                                <h3>Быстрый опрос каналов</h3>
+                                <p>Подходит для динамических процессов, где важно минимизировать задержку между событием и отображением результата.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-row">
+                            <i class="bi bi-usb-symbol"></i>
+                            <div>
+                                <h3>Стандартный интерфейс связи</h3>
+                                <p>Подключение к ПК через COM-порт по USB упрощает внедрение и снижает входной барьер для новых пользователей.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2">
+                    <div class="preview-card controller-preview">
+                        <p class="section-kicker">Поддерживаемые сценарии</p>
+                        <h2>Аппаратная платформа без лишней перегрузки интерфейса.</h2>
+                        <p>Мк100 закрывает базовую инженерную задачу: надёжно принять сигнал, передать его в ПО и сохранить воспроизводимость измерения.</p>
+                        <div class="sensor-cloud">
+                            <span class="sensor-pill">Термопары</span>
+                            <span class="sensor-pill">Линейные датчики</span>
+                            <span class="sensor-pill">Нелинейные сигналы</span>
+                            <span class="sensor-pill">Инкрементальные датчики</span>
+                            <span class="sensor-pill">USB-COM</span>
+                            <span class="sensor-pill">Конфигурации экспериментов</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

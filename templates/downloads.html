@@ -1,30 +1,114 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h1 class="display-4">Центр загрузок</h1>
-        <p class="lead">Все необходимое для начала работы с комплексом «Мк100-ML».</p>
-    </div>
-
-    <div class="row justify-content-center">
-        <div class="col-lg-8">
-            <!-- Software -->
-            <h2 class="border-bottom pb-2 mb-3">Программное обеспечение</h2>
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <div>
-                    <h4 class="mb-0">MicroLab</h4>
-                    <small class="text-muted">Версия: 1.0.2.4</small>
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-shell">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                    <p class="section-kicker">Материалы для запуска</p>
+                    <h1>Скачайте ПО и документацию для быстрого старта.</h1>
+                    <p>Раздел собран как рабочий хаб: отсюда удобно взять установщик, инструкцию и сразу перейти к настройке комплекса.</p>
                 </div>
-                <a href="{{ url_for('static', filename='downloads/MicroLab.exe') }}" class="btn btn-primary"><i class="bi bi-download me-2"></i>Скачать .exe</a>
-            </div>
-            
-            <!-- Documentation -->
-            <h2 class="border-bottom pb-2 mb-3 mt-5">Документация</h2>
-            <div class="d-flex justify-content-between align-items-center mb-2">
-                <div><h5 class="mb-0">ПЛК MK100 Инструкция MicroLab</h5></div>
-                <a href="{{ url_for('static', filename='downloads/ПЛК MK100 Инструкция MicroLab ver. 1.0.2.4 отредактирована.pdf') }}" class="btn btn-outline-secondary" target="_blank"><i class="bi bi-file-earmark-pdf me-2"></i>Открыть PDF</a>
+                <div class="col-lg-4">
+                    <div class="hero-mini-card">
+                        <span>Для нового запуска</span>
+                        <strong>2 файла</strong>
+                        <p>Установщик MicroLab и инструкция по контроллеру закрывают базовую потребность при первом знакомстве с системой.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="section-shell pt-0">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="surface-card download-card h-100">
+                    <span class="download-badge">Программное обеспечение</span>
+                    <h2>MicroLab</h2>
+                    <p>Основное приложение для работы с контроллером, настройки каналов, визуализации данных и экспорта результатов.</p>
+                    <div class="download-meta">
+                        <div class="download-meta-row">
+                            <span>Текущая версия</span>
+                            <strong>1.0.2.4</strong>
+                        </div>
+                        <div class="download-meta-row">
+                            <span>Формат</span>
+                            <strong>.exe</strong>
+                        </div>
+                        <div class="download-meta-row">
+                            <span>Поддерживаемые ОС</span>
+                            <strong>Windows 7-11</strong>
+                        </div>
+                    </div>
+                    <div class="download-actions">
+                        <a href="{{ url_for('static', filename='downloads/MicroLab.exe') }}" class="btn btn-primary"><i class="bi bi-download me-2"></i>Скачать установщик</a>
+                        <a href="{{ url_for('contact') }}" class="btn btn-outline-secondary">Запросить помощь с запуском</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="surface-card download-card h-100">
+                    <span class="download-badge">Документация</span>
+                    <h2>Инструкция по ПЛК МК100</h2>
+                    <p>Подробное руководство по подключению, запуску и базовой работе с измерительным комплексом.</p>
+                    <div class="download-meta">
+                        <div class="download-meta-row">
+                            <span>Формат</span>
+                            <strong>PDF</strong>
+                        </div>
+                        <div class="download-meta-row">
+                            <span>Версия документа</span>
+                            <strong>1.0.2.4</strong>
+                        </div>
+                        <div class="download-meta-row">
+                            <span>Назначение</span>
+                            <strong>Подключение и эксплуатация</strong>
+                        </div>
+                    </div>
+                    <div class="download-actions">
+                        <a href="{{ url_for('static', filename='downloads/ПЛК MK100 Инструкция MicroLab ver. 1.0.2.4 отредактирована.pdf') }}" class="btn btn-outline-secondary" target="_blank"><i class="bi bi-file-earmark-pdf me-2"></i>Открыть PDF</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="surface-card">
+                    <p class="section-kicker">Быстрый старт</p>
+                    <h2>Что сделать после скачивания</h2>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="check-row">
+                                <i class="bi bi-1-circle-fill"></i>
+                                <div>
+                                    <strong>Установите MicroLab</strong>
+                                    <p class="mb-0">Запустите установщик и подготовьте рабочее место оператора на ПК.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="check-row">
+                                <i class="bi bi-2-circle-fill"></i>
+                                <div>
+                                    <strong>Подключите контроллер</strong>
+                                    <p class="mb-0">Соедините Мк100 с компьютером и проверьте доступность COM-порта.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="check-row">
+                                <i class="bi bi-3-circle-fill"></i>
+                                <div>
+                                    <strong>Сверьтесь с инструкцией</strong>
+                                    <p class="mb-0">Уточните схему подключения датчиков и последовательность начальной настройки.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

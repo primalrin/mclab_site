@@ -16,7 +16,7 @@ nav_items = {
     'use_cases': 'Примеры применения',
     'specs': 'Спецификации',
     'downloads': 'Загрузки',
-    'contact': 'Купить'
+    'contact': 'Контакты'
 }
 
 # --- Mail Configuration ---
@@ -36,7 +36,7 @@ mail = Mail(app)
 
 @app.route('/')
 def home():
-    return render_template('index.html', title='Точные измерения. Простая визуализация.', active_page='home', nav_items=nav_items)
+    return render_template('index.html', title='Измерительный комплекс для точных измерений', active_page='home', nav_items=nav_items)
 
 @app.route('/features')
 def features():
@@ -44,7 +44,7 @@ def features():
 
 @app.route('/use-cases')
 def use_cases():
-    return render_template('use_cases.html', title='Примеры применения «Мк100-ML»', active_page='use_cases', nav_items=nav_items)
+    return render_template('use_cases.html', title='Сценарии применения «Мк100-ML»', active_page='use_cases', nav_items=nav_items)
 
 @app.route('/specs')
 def specs():
@@ -52,7 +52,7 @@ def specs():
 
 @app.route('/downloads')
 def downloads():
-    return render_template('downloads.html', title='Загрузки', active_page='downloads', nav_items=nav_items)
+    return render_template('downloads.html', title='Загрузки и документация', active_page='downloads', nav_items=nav_items)
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
@@ -66,7 +66,7 @@ def contact():
         # Простая серверная валидация
         if not name or not email or not message:
             flash('Пожалуйста, заполните все обязательные поля.', 'danger')
-            return render_template('contact.html', title='Купить / Контакты', active_page='contact', nav_items=nav_items, form_data=request.form)
+            return render_template('contact.html', title='Запрос предложения и контакты', active_page='contact', nav_items=nav_items, form_data=request.form)
 
         try:
             msg_title = f"Новый запрос с сайта от {name}"
@@ -91,7 +91,7 @@ Email: {email}
             app.logger.error(f"Ошибка отправки email: {e}")
             flash('Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте позже или свяжитесь с нами напрямую.', 'danger')
 
-    return render_template('contact.html', title='Купить / Контакты', active_page='contact', nav_items=nav_items)
+    return render_template('contact.html', title='Запрос предложения и контакты', active_page='contact', nav_items=nav_items)
 
 if __name__ == '__main__':
     app.run(debug=True)

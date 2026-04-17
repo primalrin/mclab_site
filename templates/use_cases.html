@@ -1,47 +1,99 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="container py-5">
-    <div class="text-center mb-5">
-        <h1 class="display-4">Где используется «Мк100-ML»?</h1>
-        <p class="lead">Реальные сценарии применения нашего измерительного комплекса в различных отраслях.</p>
-    </div>
-
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-        <!-- Use Case 1 -->
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="https://placehold.co/400x250/EFEFEF/333333?text=График+Сила/Перемещение" class="card-img-top" alt="Испытательный стенд">
-                <div class="card-body">
-                    <h5 class="card-title">Испытательный стенд</h5>
-                    <p class="card-text"><strong>Задача:</strong> Контроль усилия и деформации при испытании пружин на сжатие.</p>
-                    <p class="card-text"><strong>Решение:</strong> К контроллеру подключены датчик силы и датчик перемещения. MicroLab NG строит график "Сила/Перемещение" в реальном времени.</p>
+<section class="page-hero">
+    <div class="container">
+        <div class="page-hero-shell">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8">
+                    <p class="section-kicker">Сценарии применения</p>
+                    <h1>Комплекс работает там, где важны повторяемость измерений и ясная визуализация.</h1>
+                    <p>Мк100-ML одинаково полезен на испытательных стендах, в учебных лабораториях и в прикладных инженерных исследованиях, где нужно быстро увидеть физический смысл сигнала.</p>
+                    <div class="page-hero-meta">
+                        <span class="page-hero-chip">Испытательные стенды</span>
+                        <span class="page-hero-chip">Термический анализ</span>
+                        <span class="page-hero-chip">Учебные эксперименты</span>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Use Case 2 -->
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="https://placehold.co/400x250/EFEFEF/333333?text=8+температурных+кривых" class="card-img-top" alt="Термический анализ">
-                <div class="card-body">
-                    <h5 class="card-title">Термический анализ</h5>
-                    <p class="card-text"><strong>Задача:</strong> Мониторинг распределения температуры по поверхности объекта при нагреве и охлаждении.</p>
-                    <p class="card-text"><strong>Решение:</strong> 8 термопар подключены к Мк100. На одном графике отображаются все 8 кривых, а виртуальный канал показывает их среднее значение.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Use Case 3 -->
-        <div class="col">
-            <div class="card h-100 shadow-sm">
-                <img src="https://placehold.co/400x250/EFEFEF/333333?text=Учебная+лаборатория" class="card-img-top" alt="Учебная лаборатория">
-                <div class="card-body">
-                    <h5 class="card-title">Учебная лаборатория</h5>
-                    <p class="card-text"><strong>Задача:</strong> Демонстрация студентам принципов работы датчиков и законов физики.</p>
-                    <p class="card-text"><strong>Решение:</strong> Студенты самостоятельно подключают датчики, калибруют их и проводят эксперименты, сразу видя результат на экране.</p>
+                <div class="col-lg-4">
+                    <div class="hero-mini-card">
+                        <span>Фокус</span>
+                        <strong>Не отрасль, а задача</strong>
+                        <p>Съём сигнала, визуализация, калибровка и сохранение результата в воспроизводимом виде.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="section-shell pt-0">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="surface-card case-card h-100">
+                    <span class="case-tag">Испытательные стенды</span>
+                    <div class="case-metric">2-4 сигнала</div>
+                    <h3>Испытания на усилие и перемещение</h3>
+                    <p>Комплекс помогает синхронно снимать усилие, ход, температуру и строить наглядные зависимости прямо во время испытания.</p>
+                    <div class="chip-row">
+                        <span class="chip">Датчик силы</span>
+                        <span class="chip">Датчик перемещения</span>
+                        <span class="chip">График в реальном времени</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="surface-card case-card h-100">
+                    <span class="case-tag">Термический анализ</span>
+                    <div class="case-metric">8 каналов</div>
+                    <h3>Параллельный контроль температурных зон</h3>
+                    <p>Подключайте несколько термопар, отслеживайте распределение температуры и используйте виртуальные каналы для расчёта средних значений.</p>
+                    <div class="chip-row">
+                        <span class="chip">Термопары</span>
+                        <span class="chip">Средние значения</span>
+                        <span class="chip">Экспорт CSV</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="surface-card case-card h-100">
+                    <span class="case-tag">Учебные лаборатории</span>
+                    <div class="case-metric">1 интерфейс</div>
+                    <h3>Показ физического процесса без лишней подготовки</h3>
+                    <p>Студенты быстрее понимают взаимосвязь сигнала и физической величины, когда видят калибровку, график и численные значения в одном окне.</p>
+                    <div class="chip-row">
+                        <span class="chip">Быстрый старт</span>
+                        <span class="chip">Наглядная демонстрация</span>
+                        <span class="chip">Сохранение конфигураций</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="surface-card case-card h-100">
+                    <span class="case-tag">Прикладные исследования</span>
+                    <div class="case-metric">От сигнала к данным</div>
+                    <h3>Пилотные установки и исследовательские макеты</h3>
+                    <p>Когда установка меняется от эксперимента к эксперименту, важна возможность быстро перенастроить каналы и получить структурированные результаты без доработки стека.</p>
+                    <div class="chip-row">
+                        <span class="chip">Гибкая настройка</span>
+                        <span class="chip">Виртуальные каналы</span>
+                        <span class="chip">Повторяемость эксперимента</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="surface-card mt-4">
+            <p class="section-kicker">Где особенно полезно</p>
+            <h2>Подходит для задач, где инженер хочет увидеть результат сразу, а не собирать его по кускам.</h2>
+            <div class="industry-strip">
+                <span class="industry-pill">Учебные стенды</span>
+                <span class="industry-pill">Материаловедение</span>
+                <span class="industry-pill">Термические процессы</span>
+                <span class="industry-pill">Прикладная механика</span>
+                <span class="industry-pill">Лабораторные установки</span>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

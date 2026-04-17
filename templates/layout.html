@@ -3,53 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10222d">
     <title>{{ title }} | Мк100-ML</title>
-    <!-- Bootstrap CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
+<body class="page-{{ active_page }}">
+    <div class="site-backdrop" aria-hidden="true"></div>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">
-                <i class="bi bi-graph-up-arrow"></i> Мк100-ML
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <span class="brand-mark" aria-hidden="true"><span></span></span>
+                <span class="brand-copy">
+                    <strong>Мк100-ML</strong>
+                    <small>Измерительный комплекс</small>
+                </span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
                     {% for page, name in nav_items.items() %}
                     <li class="nav-item">
-                        <a class="nav-link {% if page == active_page %}active fw-bold{% endif %}" href="{{ url_for(page) }}">{{ name }}</a>
+                        <a class="nav-link {% if page == active_page %}active{% endif %}" href="{{ url_for(page) }}">{{ name }}</a>
                     </li>
                     {% endfor %}
                 </ul>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary btn-sm nav-action ms-lg-4">Запросить предложение</a>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="main-content">
         {% block content %}{% endblock %}
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center p-4 mt-auto">
+    <section class="footer-cta">
         <div class="container">
-            <p class="mb-0">&copy; 2023 mclab.ru. Все права защищены.</p>
-            <p><a href="{{ url_for('contact') }}" class="text-white">Связаться с нами</a></p>
+            <div class="cta-banner">
+                <div>
+                    <p class="section-kicker">Следующий шаг</p>
+                    <h2>Покажем, как Мк100-ML встроится в ваш стенд или лабораторию.</h2>
+                    <p>Подберём конфигурацию, расскажем про датчики, калибровку и сценарий демонстрации под вашу задачу.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Обсудить задачу</a>
+                    <a href="{{ url_for('downloads') }}" class="btn btn-outline-dark btn-lg">Скачать материалы</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="footer-brand">
+                        <p class="footer-label">О комплексе</p>
+                        <h3>Мк100-ML</h3>
+                        <p>Аппаратно-программный комплекс для точных измерений, калибровки каналов и наглядной визуализации данных в реальном времени.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <p class="footer-label">Разделы</p>
+                    <div class="footer-links">
+                        {% for page, name in nav_items.items() %}
+                        <a href="{{ url_for(page) }}">{{ name }}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <p class="footer-label">Контакты</p>
+                    <div class="footer-links">
+                        <a href="mailto:sales@mclab.ru">sales@mclab.ru</a>
+                        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                        <span>Москва, ул. Научная, д. 1, офис 101</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 mclab.ru. Все права защищены.</span>
+                <a href="{{ url_for('contact') }}">Связаться с нами</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
     <script src="{{ url_for('static', filename='js/form-validation.js') }}"></script>
 </body>
 </html>
