@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PUBLIC_DIR = ROOT / "public"
 STATIC_DIR = ROOT / "static"
+MAX_ASSET_SIZE_BYTES = 25 * 1024 * 1024
 
 sys.path.insert(0, str(ROOT))
 
@@ -75,7 +76,20 @@ def export_pages() -> None:
 
 
 def copy_static_assets() -> None:
-    shutil.copytree(STATIC_DIR, PUBLIC_DIR / "static")
+    target_static_dir = PUBLIC_DIR / "static"
+    for source_path in STATIC_DIR.rglob("*"):
+        if source_path.is_dir():
+            continue
+
+        relative_path = source_path.relative_to(STATIC_DIR)
+        target_path = target_static_dir / relative_path
+        target_path.parent.mkdir(parents=True, exist_ok=True)
+
+        if source_path.stat().st_size > MAX_ASSET_SIZE_BYTES:
+            print(f"Skipping oversized asset: {relative_path}")
+            continue
+
+        shutil.copy2(source_path, target_path)
 
 
 def write_support_files() -> None:

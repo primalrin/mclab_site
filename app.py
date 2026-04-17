@@ -2,6 +2,11 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+DOWNLOAD_URLS = {
+    "installer": "https://github.com/primalrin/mclab_site/raw/main/static/downloads/MicroLab.exe",
+    "manual": "/static/downloads/%D0%9F%D0%9B%D0%9A%20MK100%20%D0%98%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F%20MicroLab%20ver.%201.0.2.4%20%D0%BE%D1%82%D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B0.pdf",
+}
+
 NAV_ITEMS = {
     "home": "Главная",
     "features": "Возможности",
@@ -27,6 +32,7 @@ def render_page(template_name: str, active_page: str):
         title=PAGE_TITLES[active_page],
         active_page=active_page,
         nav_items=NAV_ITEMS,
+        download_urls=DOWNLOAD_URLS,
     )
 
 

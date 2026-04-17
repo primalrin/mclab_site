@@ -44,9 +44,10 @@
                         </div>
                     </div>
                     <div class="download-actions">
-                        <a href="{{ url_for('static', filename='downloads/MicroLab.exe') }}" class="btn btn-primary"><i class="bi bi-download me-2"></i>Скачать установщик</a>
+                        <a href="{{ download_urls.installer }}" class="btn btn-primary" target="_blank" rel="noopener"><i class="bi bi-download me-2"></i>Скачать установщик</a>
                         <a href="{{ url_for('contact') }}" class="btn btn-outline-secondary">Запросить помощь с запуском</a>
                     </div>
+                    <p class="download-note mt-3 mb-0">Установщик хранится отдельно и откроется в новой вкладке.</p>
                 </div>
             </div>
             <div class="col-lg-5">
@@ -69,7 +70,7 @@
                         </div>
                     </div>
                     <div class="download-actions">
-                        <a href="{{ url_for('static', filename='downloads/ПЛК MK100 Инструкция MicroLab ver. 1.0.2.4 отредактирована.pdf') }}" class="btn btn-outline-secondary" target="_blank"><i class="bi bi-file-earmark-pdf me-2"></i>Открыть PDF</a>
+                        <a href="{{ download_urls.manual }}" class="btn btn-outline-secondary" target="_blank" rel="noopener"><i class="bi bi-file-earmark-pdf me-2"></i>Открыть PDF</a>
                     </div>
                 </div>
             </div>
