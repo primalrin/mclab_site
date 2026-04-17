@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10222d">
+    <title>Измерительный комплекс для точных измерений | Мк100-ML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="page-home">
+    <div class="site-backdrop" aria-hidden="true"></div>
+
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <span class="brand-mark" aria-hidden="true"><span></span></span>
+                <span class="brand-copy">
+                    <strong>Мк100-ML</strong>
+                    <small>Измерительный комплекс</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Главная</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link " href="/features">Возможности</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link " href="/use-cases">Примеры применения</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link " href="/specs">Спецификации</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link " href="/downloads">Загрузки</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link " href="/contact">Контакты</a>
+                    </li>
+                    
+                </ul>
+                <a href="/contact" class="btn btn-primary btn-sm nav-action ms-lg-4">Запросить предложение</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-shell">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="hero-copy">
+                        <p class="section-kicker">Измерительный комплекс для лабораторий, стендов и учебных установок</p>
+                        <h1 class="hero-title">Точные измерения без лишнего промежуточного стека.</h1>
+                        <p class="hero-lead">Мк100-ML объединяет контроллер и ПО MicroLab в одну рабочую среду: подключайте датчики, калибруйте каналы, отслеживайте графики и выгружайте результаты в удобном формате.</p>
+                        <div class="hero-actions">
+                            <a href="/contact" class="btn btn-primary btn-lg">Запросить консультацию</a>
+                            <a href="/features" class="btn btn-outline-secondary btn-lg">Посмотреть возможности</a>
+                        </div>
+                        <div class="hero-badges">
+                            <span class="hero-badge"><i class="bi bi-activity"></i> Мониторинг в реальном времени</span>
+                            <span class="hero-badge"><i class="bi bi-sliders2"></i> Калибровка без кода</span>
+                            <span class="hero-badge"><i class="bi bi-file-earmark-arrow-down"></i> Экспорт в CSV</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="glass-panel hero-visual">
+                        <div class="panel-top">
+                            <div class="panel-dots" aria-hidden="true">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="panel-label">MicroLab Dashboard</span>
+                        </div>
+                        <div class="monitor-window">
+                            <div class="monitor-header">
+                                <div>
+                                    <strong>Активный эксперимент</strong>
+                                    <p>Графики, каналы и контрольные значения в одном окне.</p>
+                                </div>
+                                <span class="monitor-badge">Online</span>
+                            </div>
+                            <div class="monitor-grid">
+                                <div class="chart-card">
+                                    <span class="chart-title">Динамика сигнала</span>
+                                    <div class="graph-bars" aria-hidden="true">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="chart-legend">
+                                        <span><i></i> Температура</span>
+                                        <span><i></i> Усилие</span>
+                                    </div>
+                                </div>
+                                <div class="readout-stack">
+                                    <div class="readout-card">
+                                        <small>Канал 1</small>
+                                        <strong>742.4 °C</strong>
+                                        <span>Термопара ТХА</span>
+                                    </div>
+                                    <div class="readout-card">
+                                        <small>Канал 2</small>
+                                        <strong>18.6 кН</strong>
+                                        <span>Датчик силы</span>
+                                    </div>
+                                    <div class="channel-list">
+                                        <div class="channel-row">
+                                            <span><i class="channel-status"></i> Виртуальный канал</span>
+                                            <strong>Среднее</strong>
+                                        </div>
+                                        <div class="channel-row">
+                                            <span><i class="channel-status"></i> Экспорт</span>
+                                            <strong>CSV</strong>
+                                        </div>
+                                        <div class="channel-row">
+                                            <span><i class="channel-status"></i> Режим записи</span>
+                                            <strong>Непрерывный</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="device-strip">
+                            <div class="device-card">
+                                Контроллер Мк100
+                                <span>Подключение датчиков и съём сигнала</span>
+                            </div>
+                            <div class="device-card">
+                                MicroLab NG
+                                <span>Калибровка, графики и сохранение данных</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 metrics-row">
+            <div class="col-md-4">
+                <div class="metric-card">
+                    <span class="metric-label">Запуск</span>
+                    <div class="metric-value">5 минут</div>
+                    <p class="metric-copy">От подключения датчиков до первого осмысленного графика на экране.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="metric-card">
+                    <span class="metric-label">Подход</span>
+                    <div class="metric-value">1 стек</div>
+                    <p class="metric-copy">Контроллер, калибровка, визуализация и экспорт объединены в одном процессе.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="metric-card">
+                    <span class="metric-label">Результат</span>
+                    <div class="metric-value">Онлайн</div>
+                    <p class="metric-copy">Инженер видит поведение объекта в реальном времени и быстрее принимает решения.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-kicker">Ключевые преимущества</p>
+            <h2 class="section-title">Интерфейс и подача теперь подчёркивают инженерную суть продукта.</h2>
+            <p class="section-lead">Акцент смещён с абстрактных обещаний на рабочий сценарий: что получает специалист, как устроен процесс измерений и почему комплекс удобен в эксплуатации.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-xl-3">
+                <div class="surface-card advantage-card h-100">
+                    <span class="icon-pill"><i class="bi bi-lightning-charge"></i></span>
+                    <h3>Быстрый старт</h3>
+                    <p>Подключение, настройка и первые измерения без сложной интеграции и долгого обучения оператора.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="surface-card advantage-card h-100">
+                    <span class="icon-pill"><i class="bi bi-rulers"></i></span>
+                    <h3>Гибкая работа с датчиками</h3>
+                    <p>Термопары, линейные и нелинейные сигналы, виртуальные каналы и комбинированные сценарии измерений.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="surface-card advantage-card h-100">
+                    <span class="icon-pill"><i class="bi bi-calculator"></i></span>
+                    <h3>Калибровка внутри интерфейса</h3>
+                    <p>Преобразование сигнала в физические величины без внешних таблиц и ручных расчётов.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="surface-card advantage-card h-100">
+                    <span class="icon-pill"><i class="bi bi-save2"></i></span>
+                    <h3>Готовые результаты</h3>
+                    <p>Сохранение конфигураций и экспорт данных в CSV для дальнейшей обработки в Excel, MATLAB или Python.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-shell section-contrast">
+    <div class="container">
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-7">
+                <div class="surface-card h-100">
+                    <p class="section-kicker">Как это работает</p>
+                    <h2>Три шага от сигнала до отчёта.</h2>
+                    <div class="workflow-grid">
+                        <div class="workflow-step">
+                            <span class="step-number">1</span>
+                            <div>
+                                <h3>Подключите датчики</h3>
+                                <p>Контроллер Мк100 принимает сигналы от измерительных каналов и готовит их к дальнейшей обработке.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-number">2</span>
+                            <div>
+                                <h3>Настройте каналы и калибровку</h3>
+                                <p>MicroLab NG помогает присвоить имена каналам, задать формулы, коэффициенты и виртуальные вычисления.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <span class="step-number">3</span>
+                            <div>
+                                <h3>Наблюдайте, анализируйте, сохраняйте</h3>
+                                <p>Оператор видит графики в реальном времени, отмечает участки и выгружает результаты без потери контекста.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="highlight-panel h-100">
+                    <p class="section-kicker">Что получает инженер</p>
+                    <h2>Рабочее место, а не просто ещё один драйвер.</h2>
+                    <p>Вместо разрозненных утилит, ручного пересчёта и отдельных скриптов вы получаете цельный контур работы с измерениями.</p>
+                    <div class="signal-list">
+                        <div>
+                            <span>Графики и легенда</span>
+                            <strong>сразу после запуска</strong>
+                        </div>
+                        <div>
+                            <span>Калибровка каналов</span>
+                            <strong>в интерфейсе</strong>
+                        </div>
+                        <div>
+                            <span>Экспорт результатов</span>
+                            <strong>в пару кликов</strong>
+                        </div>
+                        <div>
+                            <span>Повторное использование конфигураций</span>
+                            <strong>без ручной пересборки</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <section class="footer-cta">
+        <div class="container">
+            <div class="cta-banner">
+                <div>
+                    <p class="section-kicker">Следующий шаг</p>
+                    <h2>Покажем, как Мк100-ML встроится в ваш стенд или лабораторию.</h2>
+                    <p>Подберём конфигурацию, расскажем про датчики, калибровку и сценарий демонстрации под вашу задачу.</p>
+                </div>
+                <div class="cta-actions">
+                    <a href="/contact" class="btn btn-primary btn-lg">Обсудить задачу</a>
+                    <a href="/downloads" class="btn btn-outline-dark btn-lg">Скачать материалы</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="footer-brand">
+                        <p class="footer-label">О комплексе</p>
+                        <h3>Мк100-ML</h3>
+                        <p>Аппаратно-программный комплекс для точных измерений, калибровки каналов и наглядной визуализации данных в реальном времени.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <p class="footer-label">Разделы</p>
+                    <div class="footer-links">
+                        
+                        <a href="/">Главная</a>
+                        
+                        <a href="/features">Возможности</a>
+                        
+                        <a href="/use-cases">Примеры применения</a>
+                        
+                        <a href="/specs">Спецификации</a>
+                        
+                        <a href="/downloads">Загрузки</a>
+                        
+                        <a href="/contact">Контакты</a>
+                        
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <p class="footer-label">Контакты</p>
+                    <div class="footer-links">
+                        <a href="mailto:sales@mclab.ru">sales@mclab.ru</a>
+                        <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                        <span>Москва, ул. Научная, д. 1, офис 101</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 mclab.ru. Все права защищены.</span>
+                <a href="/contact">Связаться с нами</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/form-validation.js"></script>
+</body>
+</html>

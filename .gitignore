@@ -16,3 +16,8 @@ venv.bak/
 # IDE / Editor
 .vscode/
 .idea/
+
+# Node / Cloudflare
+node_modules/
+.wrangler/
+.dev.vars

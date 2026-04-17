@@ -1,0 +1,13 @@
+{
+  "name": "mclab-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:static": "python scripts/export_static.py",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
