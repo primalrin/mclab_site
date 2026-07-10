@@ -7,7 +7,7 @@
                 <div class="col-lg-6">
                     <div class="hero-copy">
                         <p class="section-kicker">Измерительный комплекс для лабораторий, стендов и учебных установок</p>
-                        <h1 class="hero-title">Точные измерения без лишнего промежуточного стека.</h1>
+                        <h1 class="hero-title">Точные измерения без лишних звеньев.</h1>
                         <p class="hero-lead">Мк100-ML объединяет контроллер и ПО MicroLab в одну рабочую среду: подключайте датчики, калибруйте каналы, отслеживайте графики и выгружайте результаты в удобном формате.</p>
                         <div class="hero-actions">
                             <a href="{{ url_for('contact') }}" class="btn btn-primary btn-lg">Запросить консультацию</a>
@@ -41,13 +41,28 @@
                             <div class="monitor-grid">
                                 <div class="chart-card">
                                     <span class="chart-title">Динамика сигнала</span>
-                                    <div class="graph-bars" aria-hidden="true">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
+                                    <div class="signal-chart" aria-hidden="true">
+                                        <svg viewBox="0 0 420 190" preserveAspectRatio="none">
+                                            <defs>
+                                                <linearGradient id="signalArea" x1="0" x2="0" y1="0" y2="1">
+                                                    <stop offset="0%" stop-color="#33d7cf" stop-opacity="0.28" />
+                                                    <stop offset="100%" stop-color="#33d7cf" stop-opacity="0" />
+                                                </linearGradient>
+                                            </defs>
+                                            <g class="chart-grid">
+                                                <line x1="0" y1="35" x2="420" y2="35" />
+                                                <line x1="0" y1="85" x2="420" y2="85" />
+                                                <line x1="0" y1="135" x2="420" y2="135" />
+                                                <line x1="70" y1="0" x2="70" y2="190" />
+                                                <line x1="175" y1="0" x2="175" y2="190" />
+                                                <line x1="280" y1="0" x2="280" y2="190" />
+                                                <line x1="385" y1="0" x2="385" y2="190" />
+                                            </g>
+                                            <path class="chart-area" d="M0 152 C35 143, 51 123, 82 130 S131 92, 165 102 S220 67, 254 79 S304 42, 343 58 S390 28, 420 36 L420 190 L0 190 Z" />
+                                            <path class="chart-line chart-line-main" d="M0 152 C35 143, 51 123, 82 130 S131 92, 165 102 S220 67, 254 79 S304 42, 343 58 S390 28, 420 36" />
+                                            <path class="chart-line chart-line-secondary" d="M0 112 C44 104, 59 119, 96 106 S155 124, 198 103 S259 118, 305 94 S368 108, 420 80" />
+                                            <circle cx="343" cy="58" r="5" class="chart-point" />
+                                        </svg>
                                     </div>
                                     <div class="chart-legend">
                                         <span><i></i> Температура</span>
@@ -127,8 +142,8 @@
     <div class="container">
         <div class="section-heading">
             <p class="section-kicker">Ключевые преимущества</p>
-            <h2 class="section-title">Интерфейс и подача теперь подчёркивают инженерную суть продукта.</h2>
-            <p class="section-lead">Акцент смещён с абстрактных обещаний на рабочий сценарий: что получает специалист, как устроен процесс измерений и почему комплекс удобен в эксплуатации.</p>
+            <h2 class="section-title">Всё, что нужно инженеру, — в одной рабочей среде.</h2>
+            <p class="section-lead">Подключение, настройка, калибровка и анализ собраны в понятный процесс — от первого сигнала до готовых данных для отчёта.</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-xl-3">
