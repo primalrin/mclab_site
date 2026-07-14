@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 import shutil
 import sys
 from pathlib import Path
@@ -8,6 +9,21 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBLIC_DIR = ROOT / "public"
 STATIC_DIR = ROOT / "static"
 MAX_ASSET_SIZE_BYTES = 25 * 1024 * 1024
+
+
+def normalize_base_path(value: str) -> str:
+    value = value.strip()
+    if not value or value == "/":
+        return ""
+
+    if "://" in value or ".." in value:
+        raise ValueError("PAGES_BASE_PATH must be a URL path")
+
+    return f"/{value.strip('/')}"
+
+
+BASE_PATH = normalize_base_path(os.environ.get("PAGES_BASE_PATH", ""))
+HOME_URL = f"{BASE_PATH}/" if BASE_PATH else "/"
 
 sys.path.insert(0, str(ROOT))
 
@@ -22,13 +38,13 @@ ROUTES = {
     "/contact": "contact/index.html",
 }
 
-NOT_FOUND_HTML = """<!doctype html>
+NOT_FOUND_HTML = f"""<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Страница не найдена</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="{BASE_PATH}/static/css/style.css">
 </head>
 <body>
     <main class="section-shell">
@@ -37,7 +53,7 @@ NOT_FOUND_HTML = """<!doctype html>
                 <p class="section-kicker">Ошибка 404</p>
                 <h1>Страница не найдена</h1>
                 <p class="section-lead">Возможно, ссылка устарела или страница была перемещена.</p>
-                <a class="btn btn-primary" href="/">Вернуться на главную</a>
+                <a class="btn btn-primary" href="{HOME_URL}">Вернуться на главную</a>
             </div>
         </div>
     </main>
@@ -66,7 +82,10 @@ def reset_public_dir() -> None:
 def export_pages() -> None:
     with app.test_client() as client:
         for route, relative_output in ROUTES.items():
-            response = client.get(route)
+            response = client.get(
+                route,
+                environ_overrides={"SCRIPT_NAME": BASE_PATH},
+            )
             if response.status_code != 200:
                 raise RuntimeError(f"Route {route} returned {response.status_code}")
 

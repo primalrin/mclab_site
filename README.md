@@ -30,3 +30,9 @@ python scripts/export_static.py
 - `Deploy command`: `npx wrangler deploy`
 
 Cloudflare-конфиг хранится в `wrangler.jsonc`.
+
+## Демонстрация на GitHub Pages
+
+Workflow `.github/workflows/pages.yml` собирает сайт с базовым путём
+`/mclab_site` и публикует каталог `public/` на GitHub Pages. Форма заявки в
+этой сборке работает в демонстрационном режиме и не отправляет данные.

@@ -15,6 +15,20 @@
 
       form.classList.add('was-validated')
 
+      if (form.hasAttribute('data-demo-form')) {
+        event.preventDefault()
+
+        const feedback = document.getElementById('contact-feedback')
+        form.reset()
+        form.classList.remove('was-validated')
+        setFeedback(
+          feedback,
+          'success',
+          'Демонстрационная форма заполнена успешно. Данные никуда не отправлялись.'
+        )
+        return
+      }
+
       if (!form.hasAttribute('data-contact-form')) {
         return
       }
